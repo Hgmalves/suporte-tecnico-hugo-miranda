@@ -4,6 +4,7 @@ Ferramenta de suporte, diagnostico e manutencao para Windows, desenvolvida em Py
 
 ![Windows](https://img.shields.io/badge/Windows-10%2F11-blue)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-yellow)
+![Versao](https://img.shields.io/badge/Versao-2.3-green)
 ![Licenca](https://img.shields.io/badge/Licenca-MIT-green)
 
 ## Visao geral
@@ -27,6 +28,28 @@ O script foi pensado para uso por tecnicos autorizados. Algumas acoes podem alte
 - Listagem de portas abertas, processos e usuarios logados.
 - Diagnostico completo com geracao de relatorio.
 - Pacotes de manutencao para executar varias tarefas em sequencia.
+- Verificacao de compatibilidade do ambiente.
+- Registro de logs de execucao.
+- Modo teste para reduzir risco em acoes destrutivas.
+- Ajuda de recuperacao de acesso usando caminhos oficiais.
+- Consulta de licenciamento do Windows com ferramentas oficiais.
+
+## Atualizacao 2.3
+
+Esta versao substitui a versao inicial publicada no GitHub e traz uma base mais completa para uso tecnico.
+
+| Area | Versao anterior | Versao 2.3 |
+| --- | --- | --- |
+| Administrador | Reiniciava como administrador de forma direta | Pergunta antes de reiniciar como administrador |
+| Seguranca operacional | Executava algumas rotinas diretamente | Usa `MODO_TESTE` para simular acoes destrutivas por padrao |
+| Logs | Sem log centralizado | Cria logs em `logs/` com historico da execucao |
+| Relatorios | Relatorio mais simples | Relatorios salvos em `relatorios/` com resumo e detalhes |
+| Compatibilidade | Nao havia tela dedicada | Nova opcao `C` para verificar ambiente, internet, PowerShell e permissoes |
+| Recuperacao de acesso | Nao havia modulo dedicado | Nova opcao com links e passos oficiais, sem bypass de senha |
+| Licenciamento | Nao havia orientacao separada | Consulta status com `slmgr` e abre configuracoes oficiais do Windows |
+| Publicacao no GitHub | Base inicial | Versao preparada para repositorio publico, sem scripts externos de ativacao |
+
+Por seguranca e profissionalismo, a atualizacao publica nao executa ativadores, bypass, instalacao de chaves ou scripts externos. A opcao 18 foi mantida como orientacao oficial de ativacao/licenciamento.
 
 ## Requisitos
 
@@ -52,6 +75,8 @@ python suporte_tecnico.py
 ```
 
 Para melhor resultado, abra o PowerShell ou Prompt de Comando como Administrador antes de executar.
+
+Por padrao, a constante `MODO_TESTE` fica ativada no arquivo `suporte_tecnico.py`. Nesse modo, algumas rotinas de maior impacto simulam a operacao em vez de alterar o sistema.
 
 ## Geracao de executavel
 
