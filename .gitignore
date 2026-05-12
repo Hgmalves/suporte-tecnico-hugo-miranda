@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+.venv/
+venv/
+env/
+
+# Logs e relatorios gerados pela ferramenta
+logs/
+relatorios/
+*.log
+Relatorio gerado.txt
+
+# Build/empacotamento
+build/
+dist/
+*.spec
+*.exe
+
+# Arquivos grandes, externos ou locais
+*.zip
+platform-tools-latest-windows/
+Microsoft.Services.Store.winmd
+Codex Installer.exe
+Microsoft-Activation-Scripts-master.zip
+
+# Rascunhos e versoes antigas mantidas apenas localmente
+README_v*.*
+Codigo modificado.txt
+Código modificado.txt
+Executar Script.sh
+Exemplo de relatório.txt
+Script para trocagem de senha local.py
+suporte_tecnico_v*.py
+suporte_tecnico_v*_HugoMiranda*.py
+
+# Sistema/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
