@@ -1,0 +1,2 @@
+# O projeto usa apenas bibliotecas padrao do Python.
+

@@ -1,10 +1,16 @@
 # Suporte Tecnico Hugo Miranda
 
-Ferramenta de suporte e manutencao para Windows, feita em Python, com um menu interativo para tecnicos de TI executarem tarefas comuns de diagnostico, limpeza e reparacao.
+Ferramenta de suporte, diagnostico e manutencao para Windows, desenvolvida em Python para apoiar rotinas de atendimento tecnico, help desk e manutencao preventiva.
 
 ![Windows](https://img.shields.io/badge/Windows-10%2F11-blue)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-yellow)
 ![Licenca](https://img.shields.io/badge/Licenca-MIT-green)
+
+## Visao geral
+
+O projeto centraliza comandos comuns de suporte tecnico em um menu simples no terminal. A proposta e reduzir tempo em atendimentos repetitivos, padronizar verificacoes e facilitar a geracao de diagnosticos basicos em computadores Windows.
+
+O script foi pensado para uso por tecnicos autorizados. Algumas acoes podem alterar configuracoes do sistema, reiniciar servicos, limpar caches ou executar ferramentas nativas de reparo do Windows.
 
 ## Funcionalidades
 
@@ -32,13 +38,20 @@ Ferramenta de suporte e manutencao para Windows, feita em Python, com um menu in
 
 ## Como usar
 
-Clone o repositorio ou baixe o arquivo `suporte_tecnico.py`.
+Clone o repositorio:
+
+```powershell
+git clone https://github.com/Hgmalves/suporte-tecnico-hugo-miranda.git
+cd suporte-tecnico-hugo-miranda
+```
+
+Execute o script:
 
 ```powershell
 python suporte_tecnico.py
 ```
 
-Algumas funcoes precisam de permissao de Administrador. Execute o PowerShell ou Prompt de Comando como Administrador para obter o melhor resultado.
+Para melhor resultado, abra o PowerShell ou Prompt de Comando como Administrador antes de executar.
 
 ## Geracao de executavel
 
@@ -51,11 +64,33 @@ pyinstaller --onefile --console suporte_tecnico.py
 
 O executavel sera criado na pasta `dist/`, que fica fora do versionamento por padrao.
 
+## Estrutura do projeto
+
+```text
+.
+|-- suporte_tecnico.py   # Script principal
+|-- README.md            # Documentacao do projeto
+|-- LICENSE              # Licenca MIT
+|-- CHANGELOG.md         # Historico de alteracoes
+|-- SECURITY.md          # Orientacoes de seguranca
+`-- .gitignore           # Arquivos ignorados pelo Git
+```
+
 ## Observacoes de seguranca
 
-Use esta ferramenta apenas em computadores proprios ou em equipamentos onde voce tenha autorizacao para realizar manutencao. Algumas opcoes alteram configuracoes de rede, servicos do Windows ou executam reparos do sistema.
+- Use somente em computadores proprios ou em equipamentos onde voce tenha autorizacao.
+- Revise as opcoes antes de executar acoes de reparo, reset ou limpeza.
+- Mantenha backups quando estiver atuando em maquinas de producao.
+- Nao publique logs ou relatorios que possam conter nomes de usuarios, configuracoes internas ou dados do ambiente.
 
-Arquivos gerados, executaveis, pacotes externos, logs e relatorios foram adicionados ao `.gitignore` para evitar publicacao acidental.
+Arquivos gerados, executaveis, pacotes externos, logs e relatorios foram adicionados ao `.gitignore` para reduzir risco de publicacao acidental.
+
+## Roadmap
+
+- Melhorar mensagens de erro e validacoes.
+- Separar funcoes por modulos.
+- Adicionar modo de diagnostico sem alteracoes no sistema.
+- Criar testes para funcoes que nao dependem diretamente do Windows.
 
 ## Autor
 
@@ -64,4 +99,3 @@ Desenvolvido por Hugo Miranda - Suporte.
 ## Licenca
 
 Este projeto esta licenciado sob os termos da licenca MIT. Consulte o arquivo [LICENSE](LICENSE).
-
